@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="newmodel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="newmodelStoreContainer">
+          <EntitySet Name="feedback" EntityType="newmodel.Store.feedback" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="feedback">
+          <Key>
+            <PropertyRef Name="empno" />
+          </Key>
+          <Property Name="department" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="empno" Type="numeric" Nullable="false" Precision="6" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Email id" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="landline" Type="numeric" Nullable="false" Precision="8" />
+          <Property Name="cell" Type="numeric" Nullable="false" Precision="10" />
+          <Property Name="q1" Type="numeric" Nullable="false" Precision="1" />
+          <Property Name="q2" Type="numeric" Nullable="false" Precision="1" />
+          <Property Name="q3" Type="numeric" Nullable="false" Precision="1" />
+          <Property Name="q4" Type="numeric" Nullable="false" Precision="1" />
+          <Property Name="q5" Type="numeric" Nullable="false" Precision="1" />
+          <Property Name="q6" Type="numeric" Nullable="false" Precision="1" />
+          <Property Name="q7" Type="numeric" Nullable="false" Precision="1" />
+          <Property Name="q8" Type="numeric" Nullable="false" Precision="1" />
+          <Property Name="q9" Type="numeric" Nullable="false" Precision="1" />
+          <Property Name="q10" Type="numeric" Nullable="false" Precision="1" />
+          <Property Name="q11" Type="numeric" Nullable="false" Precision="1" />
+          <Property Name="q12" Type="numeric" Nullable="false" Precision="1" />
+          <Property Name="suggestions" Type="varchar(max)" Nullable="false" />
+          <Property Name="besttechno" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="newmodel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="newentities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="feedbacks" EntityType="newmodel.feedback" />
+        </EntityContainer>
+        <EntityType Name="feedback">
+          <Key>
+            <PropertyRef Name="empno" />
+          </Key>
+          <Property Name="department" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="empno" Type="Decimal" Nullable="false" Precision="6" Scale="0" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Email_id" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="landline" Type="Decimal" Nullable="false" Precision="8" Scale="0" />
+          <Property Name="cell" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+          <Property Name="q1" Type="Decimal" Nullable="false" Precision="1" Scale="0" />
+          <Property Name="q2" Type="Decimal" Nullable="false" Precision="1" Scale="0" />
+          <Property Name="q3" Type="Decimal" Nullable="false" Precision="1" Scale="0" />
+          <Property Name="q4" Type="Decimal" Nullable="false" Precision="1" Scale="0" />
+          <Property Name="q5" Type="Decimal" Nullable="false" Precision="1" Scale="0" />
+          <Property Name="q6" Type="Decimal" Nullable="false" Precision="1" Scale="0" />
+          <Property Name="q7" Type="Decimal" Nullable="false" Precision="1" Scale="0" />
+          <Property Name="q8" Type="Decimal" Nullable="false" Precision="1" Scale="0" />
+          <Property Name="q9" Type="Decimal" Nullable="false" Precision="1" Scale="0" />
+          <Property Name="q10" Type="Decimal" Nullable="false" Precision="1" Scale="0" />
+          <Property Name="q11" Type="Decimal" Nullable="false" Precision="1" Scale="0" />
+          <Property Name="q12" Type="Decimal" Nullable="false" Precision="1" Scale="0" />
+          <Property Name="suggestions" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="besttechno" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="newmodelStoreContainer" CdmEntityContainer="newentities">
+          <EntitySetMapping Name="feedbacks"><EntityTypeMapping TypeName="newmodel.feedback"><MappingFragment StoreEntitySet="feedback">
+            <ScalarProperty Name="department" ColumnName="department" />
+            <ScalarProperty Name="empno" ColumnName="empno" />
+            <ScalarProperty Name="name" ColumnName="name" />
+            <ScalarProperty Name="Email_id" ColumnName="Email id" />
+            <ScalarProperty Name="landline" ColumnName="landline" />
+            <ScalarProperty Name="cell" ColumnName="cell" />
+            <ScalarProperty Name="q1" ColumnName="q1" />
+            <ScalarProperty Name="q2" ColumnName="q2" />
+            <ScalarProperty Name="q3" ColumnName="q3" />
+            <ScalarProperty Name="q4" ColumnName="q4" />
+            <ScalarProperty Name="q5" ColumnName="q5" />
+            <ScalarProperty Name="q6" ColumnName="q6" />
+            <ScalarProperty Name="q7" ColumnName="q7" />
+            <ScalarProperty Name="q8" ColumnName="q8" />
+            <ScalarProperty Name="q9" ColumnName="q9" />
+            <ScalarProperty Name="q10" ColumnName="q10" />
+            <ScalarProperty Name="q11" ColumnName="q11" />
+            <ScalarProperty Name="q12" ColumnName="q12" />
+            <ScalarProperty Name="suggestions" ColumnName="suggestions" />
+            <ScalarProperty Name="besttechno" ColumnName="besttechno" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model" ZoomLevel="81">
+        <EntityTypeShape EntityType="newmodel.feedback" Width="1.5" PointX="0.75" PointY="0.75" Height="4.8648079427083326" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

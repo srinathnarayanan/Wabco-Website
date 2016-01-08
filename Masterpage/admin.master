@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="admin.master.cs" Inherits="Masterpage_admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../App_Themes/blue/blue.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="PageWrapper">
+    <div id="header"><a href="Default1.aspx">
+        <asp:Image ID="Image1" runat="server" Height="335px" 
+            ImageUrl="~/App_Themes/blue/images/wabco_header.gif" Width="1024px" /></a>
+    </div>
+    
+<div id="SideBar" style="width: 200px; float: left;  min-height:600px; background-color:#3a599a; border: 10px; margin-left:10px; margin-top:20px; background-color:#3a599a" >
+    <asp:LoginStatus ID="LoginStatus1" runat="server" LoginText="Click here to Login" 
+        LogoutPageUrl="~/Default.aspx" LogoutText="  Click here to Logout" 
+        LogoutAction="Redirect" />
+    <ul>
+<li><a href="~/Management/Default1.aspx" runat="server">Admin Home</a></li>
+<li><a href="~/Management/Departments.aspx" runat="server">Manage Departments</a></li>
+<li><a href="~/Management/employees.aspx" runat="server">Manage employees</a></li>
+<li><a id="A1" href="~/Management/feedbackreview.aspx" runat="server">Feedback Overview</a></li>
+<li><a id="A2" href="~/Management/changepass.aspx" runat="server">Change Password</a></li>
+<li><a id="A3" href="~/Management/addadmin.aspx" runat="server">Add New Admin</a></li>
+</ul>
+</div>
+<div id="MainContent" style="width:774px; border-left: 1px solid white;
+  border-right: 2px solid white;
+  float: left;   background-color: #ffffff;
+  min-height: 300px;
+  padding: 10px;">
+<asp:ContentPlaceHolder ID="cpMainContent"
+runat="server"></asp:ContentPlaceHolder>
+</div>
+<div id="footer" style="  background-color:White; clear: both">
+    <asp:Image ID="Image2" runat="server" Height="35px" 
+        ImageUrl="~/App_Themes/blue/images/Wabco_logo.jpg" Width="111px" />
+</div>
+</div>
+</form>
+</body>
+</html>

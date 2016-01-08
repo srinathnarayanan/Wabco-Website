@@ -1,0 +1,172 @@
+﻿*
+{
+  /* 
+    Defines the main font used throughout the entire site 
+  */
+  font-family: Arial;
+    font-weight: 700;
+    text-align: left;
+}
+
+body
+{
+  /* 
+    Clears white space around the body and gives it a dark gray color.
+  */
+  margin: 0;
+  background-color: #3a599a;
+}
+
+a
+{
+  /*
+    Clears the underline on normal links, and gives them a purple text color.
+  */
+  text-decoration: none;
+  color: #ffffff;
+    font-size: medium;
+}
+
+a:hover
+{
+  /*
+    Underlines links when the user hovers the mouse over them.
+  */
+  text-decoration : underline;
+}
+
+h1
+{
+  /*
+    Makes h1 elements smaller than their browser default.
+  */
+  font-size : xx-large;
+    text-align: center;
+    background-color:#3a599a;
+    color: White;
+}
+
+h2
+{
+  /* 
+    Gives h2 elements a different background color and size, 
+    and adds a bit of margin at the top to create room between the heading and the preceding element.
+  */
+  font-size : x-large;
+  color : #000000;
+  margin-top : 10px;
+}
+
+
+
+#header
+{
+  /*
+    Gives the header the same width as the PageWrapper. The height creates some room for the logo
+    that is set with the background-image.
+  */
+  background-image: url(~/App_Themes/blue/images/truck.jpg);
+  width: 1024px;
+  height: 331px;
+}
+
+#Header a
+{
+  /*
+    The #Header a is a link nested in #Header. It provides a link back to the homepage.
+    The size of the link is the same as the header, so the entire header is clickable.
+  */
+  width: 1024px; 
+  height: 331px; 
+  display: block;  
+}
+
+
+
+#MainContent
+{
+  /*
+    Defines the main content area. The #MainContent element has a minimum height of 500 pixels, but can grow if necessary.
+    The font-size is 80% of its parent element, which in this case comes down to 80% of the font
+    the user has specified as the default font in the browser.
+  */
+  font-size: 0.8em;
+  width: 1001px;
+  border-left: 1px solid white;
+  border-right: 2px solid white;
+  float: left;
+  background-color: #ffffff;
+  min-height: 300px;
+  padding: 10px;
+}
+
+
+#Footer
+{
+  /*
+    The footer is positioned below all other content (yet still within PageWrapper).
+    clear: both is used to clear the impact of the float properties used for #MainContent and #Sidebar.
+  */
+  width: 1024px;
+  height: 37px;
+  background-color : #ffffff;
+  color : White;
+  clear: both;
+  text-align: center;
+  font-size: 0.7em;
+  font-weight: bold;
+  line-height: 37px;
+}
+
+
+#PageWrapper
+{
+  /*
+    Sets the total width for the entire page. Also sets the background-color
+    which is used to fill the background of the Sidebar in case the MainContent block is taller than the Sidebar.
+    Uses margin: auto to center the entire page in the middle of the browser's window.
+  */
+  width: 1024px;
+  background-color: #ffffff;
+  margin: auto;
+}
+
+.Introduction
+{
+  font-style: italic;
+  color: #3e3e3e;
+}
+
+.MyButton
+{
+  color: White;
+ 
+}
+
+.ErrorMessage
+{
+    color: Red;
+}
+
+.PleaseWait
+{
+height: 32px;
+width: 500px;
+background-image: url(Images/PleaseWait.gif);
+background-repeat: no-repeat;
+padding-left: 40px;
+line-height: 32px;
+}
+
+.Attention
+{
+border: 4px solid red;
+padding: 10px 0;
+width: 100px;
+margin: auto;
+display: block;
+text-align: center;
+}
+
+
+    

@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="frontend.master.cs" Inherits="Masterpage_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../App_Themes/blue/blue.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    <Scripts>
+<asp:ScriptReference Path="~/Scripts/jquery-1.4.1.min.js" />
+</Scripts>
+    </asp:ScriptManager>
+    <div id="PageWrapper">
+    <div id="Header"> 
+        <a href="Default.aspx">
+        <asp:Image ID="Image1" Class="im1" runat="server" AlternateText="wabco header" 
+            Height="300px" ImageUrl="~/App_Themes/blue/images/wabco_header.gif" 
+            Width="1024px" Visible="True" /></a>   
+            
+      
+               
+    </div>
+    <div id="MainContent">
+        <asp:ContentPlaceHolder id="cpMainContent" runat="server">
+        
+            
+        
+            <p>
+                &nbsp;</p>
+        
+            
+        
+        </asp:ContentPlaceHolder>
+    
+    
+     </div>
+    
+    <div id="footer">
+    <p>
+        <asp:Image ID="Image2" runat="server" Height="37px" 
+            ImageUrl="~/App_Themes/blue/images/Wabco_logo.jpg" Width="100px" />
+&nbsp;</p>
+    </div>
+    
+    </div>
+
+    <script type="text/javascript">
+$(function()
+{
+    
+
+
+});
+</script>
+
+    </form>
+</body>
+</html>
